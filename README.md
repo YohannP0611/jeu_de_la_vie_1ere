@@ -28,14 +28,8 @@ C'est l'analogie entre ces règles et certains critères d'évolution de populat
 * random
 
 ## __Fichiers nécessaires:__
-Pour faire fonctionner notre projet, il faut récupérer tout le contenu dans:
-* interface graphique
-    * bouton_fond2.gif
-    * bulle_fond.gif
-    * fond2.gif
-    * fond_papier.gif
-    * titanic.ico
- * base de donnée: titanic3.xls
+Pour faire fonctionner notre projet, il faut récupérer tout le contenu en faisant un zip:
+* cliquer sur l'onglet vert 'code' puis appuyer sur 'download ZIP'
 
 
 ## __Interface graphique:__ (louis, yohann)
