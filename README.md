@@ -32,16 +32,16 @@ Pour faire fonctionner notre projet, il faut récupérer tout le contenu en fais
 * cliquer sur l'onglet vert 'code' puis appuyer sur 'download ZIP'
 
 
-## __Interface graphique:__ (louis, yohann)
+## __Interface graphique:__ 
 
 
-* Création d'une fenêtre avec un titre un bouton "commencer l'aventure" qui lance la fonction CreateNewWindow
+* 
 
-![bouton commencer l'aventure](https://user-images.githubusercontent.com/91455596/154450920-27c0b2ac-292f-404f-bb2d-578d523042ad.PNG)
+![]()
  
-* un background avec des animations,puis un onglet déroulant offrant 2 possibilités:"nouvelle stat" et "quitter"
+* 
 
-* quand "nouvelle stat" est choisie la fenêtre affiche des choix sur les informations contenues dans le graphique grâce à des boutons.
+* 
 ```
 #caractéristiques des options du theme 4
 case_theme4_option1 = Radiobutton(window,text ='Oui',bg='#FADF8F',fg='black',\
@@ -56,23 +56,15 @@ case_theme4_option2 = Radiobutton(window,text ='Non',bg='#FADF8F',fg='black',\
 
 ## __Affichage et création des graphique:__ (maxence,amir)
          
-* utilisation de pandas pour lire le fichier excel et pour faire un tri dans les données qui nous intéressent
-* utilisation de camembert:
+* 
+* 
 ```
-def afficher_graphique():
-    x = filtres()
-    plt.pie(x, labels = ['Population visée', 'Reste population'],
-    colors = ['red', '#40E0D0'],
-    explode = [0.3, 0],
-    autopct = lambda x: str(round(x, 2)) + '%',
-    pctdistance = 0.7, labeldistance = 1.4,
-    shadow = True)
-    plt.show()
+
 
 ```
 *Les différents bug possible*
-* animation des bulles peut faire crash la window(il suffit de relancer le programme en général ca marche, sinon raccourcir la boucle d'apparition des bulles)
-* boutons mettent du temps a s'afficher (attendre l'apparition ne pas spam-click)
+* 
+* 
 
 
 
