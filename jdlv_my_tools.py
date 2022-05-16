@@ -32,6 +32,50 @@ def clean_grid (grid,i_min,i_max,j_min,j_max):
                 grid.cases [i][j]['c'] = death_color
     return grid
 
+def make_conway (grid, color):
+    try:
+        #grid = clean_grid (grid)
+        cases = grid.cases
+        for i in range (17, 42, 24) :
+            for j in range (29, 54) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+        for j in range (29, 54, 24) :
+            for i in range (17, 42) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+
+        for i in range (21, 38, 16) :
+            for j in range (33, 50) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+        for j in range (33, 50, 16) :
+            for i in range (21, 38) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+
+        for i in range (25, 34, 8) :
+            for j in range (37, 46) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+        for j in range (37, 46, 8) :
+            for i in range (25, 34) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+
+        for i in range (28, 31, 2) :
+            for j in range (40, 43) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+        for j in range (40, 43, 2) :
+            for i in range (28, 31) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+    except:
+        pass
+    return grid
+
+
 def make_cible (grid, i, j, color):
     try:
         #grid = clean_grid (grid)
