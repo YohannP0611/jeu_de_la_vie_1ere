@@ -538,9 +538,15 @@ def apply_rules (grid, compteur):
     print(compteur)
     if compteur == 0:
         print ("COMPTEUR % 5  is  0")
-        next_grid = make_cible(grid, 0, 0, 'red')
+        next_grid = make_conway(grid,'black')
+    elif compteur == 1:
+        next_grid = make_cible(grid,0,0,'red')
+    elif compteur == 54:
+        next_grid = clean_grid(grid,67,75,0,70)
+    elif compteur == 55:
+        next_grid = make_viseur(grid,0,0,'red')
     else:
         print ("COMPTEUR % 5 is NOT 0")
         time.sleep (0.2)
-        next_grid = apply_game_of_life_rules_basic (grid, 67, 75, 0, 70)
+        next_grid = apply_game_of_life_rules(grid)
     return next_grid
