@@ -511,35 +511,27 @@ def make_viseur(grid, i, j, color):
         pass
     return grid
 
-def apply_game_of_life_rules_basic (grid, i_min, i_max, j_min, j_max):
-	previous_grid = grid
-	previous_cases = previous_grid.cases
-	cases = grid.cases # cases is a list of lists of dictionnaries
-	next_grid = Grid (len (cases))
-	next_cases = next_grid.cases
-	for i in range (i_min, i_max):
-		for j in range (j_min, j_max):
-			next_grid = grid
-	return next_grid
-
 def apply_game_of_life_rules (grid):
-	previous_grid = grid
-	previous_cases = previous_grid.cases
-	cases = grid.cases # cases is a list of lists of dictionnaries
-	next_grid = Grid (len (cases))
-	next_cases = next_grid.cases
-	for i in range (1, len (cases) - 1):
-		for j in range (1, len (cases) - 1):
-			previous_status = cases [i][j]['s']
-			voisins = get_voisins (cases, i, j)
-			nbre_alive_voisins = count_alive_voisins (voisins)
-			if nbre_alive_voisins == 3:
-				next_cases [i] [j] = revive_case (next_cases [i] [j])
-			elif nbre_alive_voisins <= 1 or nbre_alive_voisins >= 4:
-				next_cases [i] [j] = kill_case (next_cases [i] [j])
-			else:
-				next_cases [i] [j] = cases [i] [j]
-	return next_grid
+    previous_grid = grid
+    previous_cases = previous_grid.cases
+    cases = grid.cases # cases is a list of lists of dictionnaries
+    next_grid = Grid (len (cases))
+    next_cases = next_grid.cases
+    for i in range (1, 67):
+        for j in range (1, len (cases) - 1):
+            previous_status = cases [i][j]['s']
+            voisins = get_voisins (cases, i, j)
+            nbre_alive_voisins = count_alive_voisins (voisins)
+            if nbre_alive_voisins == 3:
+                next_cases [i] [j] = revive_case (next_cases [i] [j])
+            elif nbre_alive_voisins <= 1 or nbre_alive_voisins >= 4:
+                next_cases [i] [j] = kill_case (next_cases [i] [j])
+            else:
+                next_cases [i] [j] = cases [i] [j]
+    for i in range (67, len (cases) - 1):
+        for j in range (1, len (cases) - 1):
+            next_cases [i] [j] = cases [i] [j]
+    return next_grid
 
 
 def apply_rules (grid, compteur):
