@@ -32,32 +32,10 @@ Pour faire fonctionner notre projet, il faut récupérer tout le contenu en fais
 * cliquer sur l'onglet vert 'code' puis appuyer sur 'download ZIP'
 
 
-## __Interface graphique:__ 
-
-
-* 
-
-![]()
- 
-* 
-
-* 
-```
-#caractéristiques des options du theme 4
-case_theme4_option1 = Radiobutton(window,text ='Oui',bg='#FADF8F',fg='black',\
-                        font=("Roman",15),activeforeground='white',
-                        activebackground='#048B9A',variable=état,value=1)
-case_theme4_option2 = Radiobutton(window,text ='Non',bg='#FADF8F',fg='black',\
-                        font=("Roman",15),activeforeground='white',
-                        activebackground='#048B9A',variable=état,value=2)
-
-    
- ```
 
 ## __Affichage et création des figures:__ 
-         
-* 
-* 
+Pour poser des points nous avons rentrer:
+* d'abord à la main toutes les coordonées des points pour faire apparaitre des mots:
 ```
 cases [i + 68] [j + 11] ['s'] = life_status
         cases [i + 68] [j + 11] ['c'] = color
@@ -65,8 +43,15 @@ cases [i + 68] [j + 11] ['s'] = life_status
         cases [i + 68] [j + 12] ['c'] = color
 
 ```
+* puis à l'aide d'une fonction:
+```
+for i in range (17, 42, 24) :
+            for j in range (29, 54) :
+                cases [i + 10] [j] ['s'] = life_status
+                cases [i + 10] [j] ['c'] = color
+```
 *Les différents bug possible*
-* 
+* faire apparaitre une fenetre trop grande(taille changeable dans data), on vous conseille pour notre projet la taille préexistante
 * 
 
 
