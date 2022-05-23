@@ -54,12 +54,15 @@ case_theme4_option2 = Radiobutton(window,text ='Non',bg='#FADF8F',fg='black',\
     
  ```
 
-## __Affichage et création des graphique:__ (maxence,amir)
+## __Affichage et création des figures:__ 
          
 * 
 * 
 ```
-
+cases [i + 68] [j + 11] ['s'] = life_status
+        cases [i + 68] [j + 11] ['c'] = color
+        cases [i + 68] [j + 12] ['s'] = life_status
+        cases [i + 68] [j + 12] ['c'] = color
 
 ```
 *Les différents bug possible*
