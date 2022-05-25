@@ -51,9 +51,7 @@ for i in range (17, 42, 24) :
                 cases [i + 10] [j] ['c'] = color
 ```
 *Les différents bug possible*
-* faire apparaitre une fenetre trop grande(taille changeable dans data), on vous conseille pour notre projet la taille préexistante
-* 
-
+* faire apparaitre une fenetre trop grande(taille changeable dans data), on vous conseille pour notre projet la taille préexistante(100*100)
 
 
 
