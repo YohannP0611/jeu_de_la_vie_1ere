@@ -773,7 +773,7 @@ def apply_game_of_life_rules_original (grid):
 			voisins = get_voisins (cases, i, j)
 			nbre_alive_voisins = count_alive_voisins (voisins)
 			if nbre_alive_voisins == 3:
-				next_cases [i] [j] = revive_case (next_cases [i] [j])
+				next_cases [i] [j] = revive_case (next_cases [i] [j], 'red')
 			elif nbre_alive_voisins <= 1 or nbre_alive_voisins >= 4:
 				next_cases [i] [j] = kill_case (next_cases [i] [j])
 			else:
@@ -792,7 +792,7 @@ def apply_game_of_life_rules (grid):
             voisins = get_voisins (cases, i, j)
             nbre_alive_voisins = count_alive_voisins (voisins)
             if nbre_alive_voisins == 3:
-                next_cases [i] [j] = revive_case (next_cases [i] [j])
+                next_cases [i] [j] = revive_case (next_cases [i] [j], 'black')
             elif nbre_alive_voisins <= 1 or nbre_alive_voisins >= 4:
                 next_cases [i] [j] = kill_case (next_cases [i] [j])
             else:
