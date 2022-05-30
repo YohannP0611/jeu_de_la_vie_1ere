@@ -511,66 +511,42 @@ def make_viseur(grid, i, j, color):
         pass
     return grid
 
-def make_pistolet(grid, i, j,color):
+def make_glisseur(grid, i, j,color):
     try:
         cases = grid.cases
-        color='black'
-        cases [i + 95] [j + 88] ['s'] = life_status
-        cases [i + 95] [j + 88] ['c'] = color
-        cases [i + 95] [j + 89] ['s'] = life_status
-        cases [i + 95] [j + 89] ['c'] = color
-        cases [i + 95] [j + 90] ['s'] = life_status
-        cases [i + 95] [j + 90] ['c'] = color
-        cases [i + 95] [j + 91] ['s'] = life_status
-        cases [i + 95] [j + 91] ['c'] = color
-        cases [i + 95] [j + 92] ['s'] = life_status
-        cases [i + 95] [j + 92] ['c'] = color
-        cases [i + 95] [j + 93] ['s'] = life_status
-        cases [i + 95] [j + 93] ['c'] = color
-        cases [i + 95] [j + 94] ['s'] = life_status
-        cases [i + 95] [j + 94] ['c'] = color
-        cases [i + 95] [j + 95] ['s'] = life_status
-        cases [i + 95] [j + 95] ['c'] = color
-        cases [i + 95] [j + 96] ['s'] = life_status
-        cases [i + 95] [j + 96] ['c'] = color
-        cases [i + 95] [j + 97] ['s'] = life_status
-        cases [i + 95] [j + 97] ['c'] = color
-        cases [i + 95] [j + 98] ['s'] = life_status
-        cases [i + 95] [j + 98] ['c'] = color
-        cases [i + 95] [j + 99] ['s'] = life_status
-        cases [i + 95] [j + 99] ['c'] = color
-
-        cases [i + 88] [j + 99] ['s'] = life_status
-        cases [i + 88] [j + 99] ['c'] = color
-        cases [i + 88] [j + 98] ['s'] = life_status
-        cases [i + 88] [j + 98] ['c'] = color
-        cases [i + 88] [j + 97] ['s'] = life_status
-        cases [i + 88] [j + 97] ['c'] = color
-        cases [i + 88] [j + 96] ['s'] = life_status
-        cases [i + 88] [j + 96] ['c'] = color
-        cases [i + 88] [j + 95] ['s'] = life_status
-        cases [i + 88] [j + 95] ['c'] = color
-        cases [i + 8] [j + 94] ['s'] = life_status
-        cases [i + 88] [j + 94] ['c'] = color
-
-        cases [i + 96] [j + 87] ['s'] = life_status
-        cases [i + 96] [j + 87] ['c'] = color
-        cases [i + 96] [j + 86] ['s'] = life_status
-        cases [i + 96] [j + 86] ['c'] = color
-        cases [i + 96] [j + 85] ['s'] = life_status
-        cases [i + 96] [j + 85] ['c'] = color
-        cases [i + 96] [j + 84] ['s'] = life_status
-        cases [i + 96] [j + 84] ['c'] = color
-        cases [i + 96] [j + 83] ['s'] = life_status
-        cases [i + 96] [j + 83] ['c'] = color
-        cases [i + 96] [j + 82] ['s'] = life_status
-        cases [i + 96] [j + 82] ['c'] = color
-        cases [i + 96] [j + 81] ['s'] = life_status
-        cases [i + 96] [j + 81] ['c'] = color
+        #glisseur
+        cases [i + 55] [j + 85] ['s'] = life_status
+        cases [i + 55] [j + 85] ['c'] = color
+        cases [i + 55] [j + 86] ['s'] = life_status
+        cases [i + 55] [j + 86] ['c'] = color
+        cases [i + 54] [j + 86] ['s'] = life_status
+        cases [i + 54] [j + 86] ['c'] = color
+        cases [i + 54] [j + 87] ['s'] = life_status
+        cases [i + 54] [j + 87] ['c'] = color
+        cases [i + 56] [j + 87] ['s'] = life_status
+        cases [i + 56] [j + 87] ['c'] = color
     except:
         pass
     return grid
 
+def apply_game_of_life_rules_original (grid):
+	previous_grid = grid
+	previous_cases = previous_grid.cases
+	cases = grid.cases # cases is a list of lists of dictionnaries
+	next_grid = Grid (len (cases))
+	next_cases = next_grid.cases
+	for i in range (1, len (cases) - 1):
+		for j in range (1, len (cases) - 1):
+			previous_status = cases [i][j]['s']
+			voisins = get_voisins (cases, i, j)
+			nbre_alive_voisins = count_alive_voisins (voisins)
+			if nbre_alive_voisins == 3:
+				next_cases [i] [j] = revive_case (next_cases [i] [j])
+			elif nbre_alive_voisins <= 1 or nbre_alive_voisins >= 4:
+				next_cases [i] [j] = kill_case (next_cases [i] [j])
+			else:
+				next_cases [i] [j] = cases [i] [j]
+	return next_grid
 
 def apply_game_of_life_rules (grid):
     previous_grid = grid
@@ -609,8 +585,12 @@ def apply_rules (grid, compteur):
         next_grid = clean_grid(grid,67,75,0,70)
     elif compteur == 58:
         next_grid = make_viseur(grid,0,10,'red')
-    elif compteur == 59:
-        next_grid = make_pistolet(grid,0 ,1 ,'red')
+    elif compteur == 3:
+        next_grid = make_glisseur(grid,0 ,1 ,'red')
+    elif compteur == 62:
+        next_grid= make_conway(grid,'black')
+    elif compteur == 62:
+        next_grid = apply_game_of_life_rules_original (grid)
     else:
         print ("COMPTEUR % 5 is NOT 0")
         time.sleep (0.2)
