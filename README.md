@@ -1,5 +1,5 @@
 # Notre projet:
-Créer une figure artistique grâce au jeu de la vie.
+Faire une cible qui devient un viseur grace au jeu de la vie. 
 ## __Participants__ 
 Samuel Nonon, Yohann Pouillieute
 
@@ -30,6 +30,12 @@ C'est l'analogie entre ces règles et certains critères d'évolution de populat
 ## __Fichiers nécessaires:__
 Pour faire fonctionner notre projet, il faut récupérer tout le contenu en faisant un zip:
 * cliquer sur l'onglet vert 'code' puis appuyer sur 'download ZIP'
+* 
+## __fonction adapté:__
+Nous avons changé:
+* la fonction apply_rules 
+* la fonction game_of_life pour restreindre la zone sur laquelle il va s'appliquer
+* la fonction clean_grid pour restreindre a nouveau la zone a effacé
 
 
 
