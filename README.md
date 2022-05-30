@@ -1,7 +1,11 @@
-# Notre projet:
-Faire une cible qui devient un viseur grace au jeu de la vie. 
 ## __Participants__ 
 Samuel Nonon, Yohann Pouillieute
+
+# Notre projet:
+Faire une cible qui devient un viseur grace au jeu de la vie. Tout d'abord nous faisons apparaitre le mot cible et la cible. Ensuite on applique le jeu de la vie sur la cible qui deviend un viseur fait de clignotant. Lorsque que le viseur est totalement fini le mot cible se transforme en mot viseur. Penadant la période de jeu de la vie un glisseur est lancé par un pistolet dans une main. Il a pour but de détruire le viseur. Enfin nous appliquons le jeu de la vie sur toute la grille.
+
+
+taille du projet: environ 500 lignes modifié par rapport au code initial
 
 ## __Informations sur le jeu de la vie:__
 ![exemple jeu de la vie](http://www.makery.info/wp-content/uploads/2015/08/ao%C3%BBt-01-2015-2330.gif)
@@ -58,6 +62,7 @@ for i in range (17, 42, 24) :
 ```
 *Les différents bug possible*
 * faire apparaitre une fenetre trop grande(taille changeable dans data), on vous conseille pour notre projet la taille préexistante(100*100)
+* on n
 
 
 
