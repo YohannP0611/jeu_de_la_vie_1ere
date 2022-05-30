@@ -515,16 +515,16 @@ def make_glisseur(grid, i, j,color):
     try:
         cases = grid.cases
         #glisseur
-        cases [i + 55] [j + 85] ['s'] = life_status
-        cases [i + 55] [j + 85] ['c'] = color
-        cases [i + 55] [j + 86] ['s'] = life_status
-        cases [i + 55] [j + 86] ['c'] = color
-        cases [i + 54] [j + 86] ['s'] = life_status
-        cases [i + 54] [j + 86] ['c'] = color
-        cases [i + 54] [j + 87] ['s'] = life_status
-        cases [i + 54] [j + 87] ['c'] = color
-        cases [i + 56] [j + 87] ['s'] = life_status
-        cases [i + 56] [j + 87] ['c'] = color
+        cases [i + 51] [j + 88] ['s'] = life_status
+        cases [i + 51] [j + 88] ['c'] = color
+        cases [i + 51] [j + 89] ['s'] = life_status
+        cases [i + 51] [j + 89] ['c'] = color
+        cases [i + 50] [j + 89] ['s'] = life_status
+        cases [i + 50] [j + 89] ['c'] = color
+        cases [i + 50] [j + 90] ['s'] = life_status
+        cases [i + 50] [j + 90] ['c'] = color
+        cases [i + 52] [j + 90] ['s'] = life_status
+        cases [i + 52] [j + 90] ['c'] = color
     except:
         pass
     return grid
@@ -568,9 +568,6 @@ def apply_game_of_life_rules (grid):
     for i in range (67, len (cases) - 1):
         for j in range (1, len (cases) - 1):
             next_cases [i] [j] = cases [i] [j]
-##    for i in range (67, len (cases) - 1):
-##        for j in range (1, len (cases) - 1):
-##            next_cases [i] [j] = cases [i] [j]
     return next_grid
 
 
@@ -585,11 +582,11 @@ def apply_rules (grid, compteur):
         next_grid = clean_grid(grid,67,75,0,70)
     elif compteur == 58:
         next_grid = make_viseur(grid,0,10,'red')
-    elif compteur == 3:
-        next_grid = make_glisseur(grid,0 ,1 ,'red')
-    elif compteur == 62:
+    elif compteur == 10:
+        next_grid = make_glisseur(grid,5 ,-5 ,'red')
+    elif compteur == 75:
         next_grid= make_conway(grid,'black')
-    elif compteur == 62:
+    elif compteur > 76:
         next_grid = apply_game_of_life_rules_original (grid)
     else:
         print ("COMPTEUR % 5 is NOT 0")
