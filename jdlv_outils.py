@@ -105,9 +105,9 @@ def kill_case (case):
     case ["c"] = death_color
     return case
 
-def revive_case (case):
+def revive_case (case, color):
     case ["s"] = life_status
-    case ["c"] = "black"
+    case ["c"] = color
     return case
 
 def play_music (historique):
