@@ -32,7 +32,7 @@ def clean_grid (grid,i_min,i_max,j_min,j_max):
                 grid.cases [i][j]['c'] = death_color
     return grid
 
-def make_conway (grid, color):
+def make_cible (grid, color):
     try:
         #grid = clean_grid (grid)
         cases = grid.cases
@@ -76,7 +76,7 @@ def make_conway (grid, color):
     return grid
 
 
-def make_cible (grid, i, j, color):
+def make_cible_title (grid, i, j, color):
     try:
         #grid = clean_grid (grid)
         cases = grid.cases
@@ -515,16 +515,16 @@ def make_glisseur(grid, i, j,color):
     try:
         cases = grid.cases
         #glisseur
-        cases [i + 51] [j + 88] ['s'] = life_status
-        cases [i + 51] [j + 88] ['c'] = color
-        cases [i + 51] [j + 89] ['s'] = life_status
-        cases [i + 51] [j + 89] ['c'] = color
-        cases [i + 50] [j + 89] ['s'] = life_status
-        cases [i + 50] [j + 89] ['c'] = color
-        cases [i + 50] [j + 90] ['s'] = life_status
-        cases [i + 50] [j + 90] ['c'] = color
-        cases [i + 52] [j + 90] ['s'] = life_status
-        cases [i + 52] [j + 90] ['c'] = color
+        cases [i + 56] [j + 83] ['s'] = life_status
+        cases [i + 56] [j + 83] ['c'] = color
+        cases [i + 56] [j + 84] ['s'] = life_status
+        cases [i + 56] [j + 84] ['c'] = color
+        cases [i + 55] [j + 84] ['s'] = life_status
+        cases [i + 55] [j + 84] ['c'] = color
+        cases [i + 55] [j + 85] ['s'] = life_status
+        cases [i + 55] [j + 85] ['c'] = color
+        cases [i + 57] [j + 85] ['s'] = life_status
+        cases [i + 57] [j + 85] ['c'] = color
     except:
         pass
     return grid
@@ -533,211 +533,229 @@ def make_gun(grid, i, j,color):
     try:
         cases = grid.cases
         #glisseur
-        cases [i + 0] [j + 2] ['s'] = life_status
-        cases [i + 0] [j + 2] ['c'] = color
-        cases [i + 0] [j + 3] ['s'] = life_status
-        cases [i + 0] [j + 3] ['c'] = color
+        cases [i + 2] [j + 0] ['s'] = life_status
+        cases [i + 2] [j + 0] ['c'] = color
+        cases [i + 3] [j + 0] ['s'] = life_status
+        cases [i + 3] [j + 0] ['c'] = color
 
         cases [i + 1] [j + 1] ['s'] = life_status
         cases [i + 1] [j + 1] ['c'] = color
-        cases [i + 1] [j + 4] ['s'] = life_status
-        cases [i + 1] [j + 4] ['c'] = color
-        cases [i + 1] [j + 5] ['s'] = life_status
-        cases [i + 1] [j + 5] ['c'] = color
+        cases [i + 4] [j + 1] ['s'] = life_status
+        cases [i + 4] [j + 1] ['c'] = color
+        cases [i + 5] [j + 1] ['s'] = life_status
+        cases [i + 5] [j + 1] ['c'] = color
 
-        cases [i + 2] [j + 0] ['s'] = life_status
-        cases [i + 2] [j + 0] ['c'] = color
+        cases [i + 0] [j + 2] ['s'] = life_status
+        cases [i + 0] [j + 2] ['c'] = color
         cases [i + 2] [j + 2] ['s'] = life_status
         cases [i + 2] [j + 2] ['c'] = color
-        cases [i + 2] [j + 3] ['s'] = life_status
-        cases [i + 2] [j + 3] ['c'] = color
-        cases [i + 2] [j + 6] ['s'] = life_status
-        cases [i + 2] [j + 6] ['c'] = color
+        cases [i + 3] [j + 2] ['s'] = life_status
+        cases [i + 3] [j + 2] ['c'] = color
+        cases [i + 6] [j + 2] ['s'] = life_status
+        cases [i + 6] [j + 2] ['c'] = color
 
-        cases [i + 3] [j + 1] ['s'] = life_status
-        cases [i + 3] [j + 1] ['c'] = color
-        cases [i + 3] [j + 4] ['s'] = life_status
-        cases [i + 3] [j + 4] ['c'] = color
-        cases [i + 3] [j + 7] ['s'] = life_status
-        cases [i + 3] [j + 7] ['c'] = color
-        cases [i + 3] [j + 11] ['s'] = life_status
-        cases [i + 3] [j + 11] ['c'] = color
-        cases [i + 3] [j + 12] ['s'] = life_status
-        cases [i + 3] [j + 12] ['c'] = color
-        cases [i + 3] [j + 16] ['s'] = life_status
-        cases [i + 3] [j + 16] ['c'] = color
-        cases [i + 3] [j + 17] ['s'] = life_status
-        cases [i + 3] [j + 17] ['c'] = color
-        cases [i + 3] [j + 18] ['s'] = life_status
-        cases [i + 3] [j + 18] ['c'] = color
-        cases [i + 3] [j + 20] ['s'] = life_status
-        cases [i + 3] [j + 20] ['c'] = color
+        cases [i + 1] [j + 3] ['s'] = life_status
+        cases [i + 1] [j + 3] ['c'] = color
+        cases [i + 4] [j + 3] ['s'] = life_status
+        cases [i + 4] [j + 3] ['c'] = color
+        cases [i + 7] [j + 3] ['s'] = life_status
+        cases [i + 7] [j + 3] ['c'] = color
+        cases [i + 11] [j + 3] ['s'] = life_status
+        cases [i + 11] [j + 3] ['c'] = color
+        cases [i + 12] [j + 3] ['s'] = life_status
+        cases [i + 12] [j + 3] ['c'] = color
+        cases [i + 16] [j + 3] ['s'] = life_status
+        cases [i + 16] [j + 3] ['c'] = color
+        cases [i + 17] [j + 3] ['s'] = life_status
+        cases [i + 17] [j + 3] ['c'] = color
+        cases [i + 18] [j + 3] ['s'] = life_status
+        cases [i + 18] [j + 3] ['c'] = color
+        cases [i + 20] [j + 3] ['s'] = life_status
+        cases [i + 20] [j + 3] ['c'] = color
 
-        cases [i + 4] [j + 2] ['s'] = life_status
-        cases [i + 4] [j + 2] ['c'] = color
-        cases [i + 4] [j + 5] ['s'] = life_status
-        cases [i + 4] [j + 5] ['c'] = color
-        cases [i + 4] [j + 8] ['s'] = life_status
-        cases [i + 4] [j + 8] ['c'] = color
-        cases [i + 4] [j + 10] ['s'] = life_status
-        cases [i + 4] [j + 10] ['c'] = color
-        cases [i + 4] [j + 13] ['s'] = life_status
-        cases [i + 4] [j + 13] ['c'] = color
-        cases [i + 4] [j + 15] ['s'] = life_status
-        cases [i + 4] [j + 15] ['c'] = color
-        cases [i + 4] [j + 19] ['s'] = life_status
-        cases [i + 4] [j + 19] ['c'] = color
-        cases [i + 4] [j + 21] ['s'] = life_status
-        cases [i + 4] [j + 21] ['c'] = color
+        cases [i + 2] [j + 4] ['s'] = life_status
+        cases [i + 2] [j + 4] ['c'] = color
+        cases [i + 5] [j + 4] ['s'] = life_status
+        cases [i + 5] [j + 4] ['c'] = color
+        cases [i + 8] [j + 4] ['s'] = life_status
+        cases [i + 8] [j + 4] ['c'] = color
+        cases [i + 10] [j + 4] ['s'] = life_status
+        cases [i + 10] [j + 4] ['c'] = color
+        cases [i + 13] [j + 4] ['s'] = life_status
+        cases [i + 13] [j + 4] ['c'] = color
+        cases [i + 15] [j + 4] ['s'] = life_status
+        cases [i + 15] [j + 4] ['c'] = color
+        cases [i + 19] [j + 4] ['s'] = life_status
+        cases [i + 19] [j + 4] ['c'] = color
+        cases [i + 21] [j + 4] ['s'] = life_status
+        cases [i + 21] [j + 4] ['c'] = color
 
-        cases [i + 5] [j + 3] ['s'] = life_status
-        cases [i + 5] [j + 3] ['c'] = color
-        cases [i + 5] [j + 6] ['s'] = life_status
-        cases [i + 5] [j + 6] ['c'] = color
-        cases [i + 5] [j + 9] ['s'] = life_status
-        cases [i + 5] [j + 9] ['c'] = color
-        cases [i + 5] [j + 11] ['s'] = life_status
-        cases [i + 5] [j + 11] ['c'] = color
-        cases [i + 5] [j + 12] ['s'] = life_status
-        cases [i + 5] [j + 12] ['c'] = color
-        cases [i + 5] [j + 14] ['s'] = life_status
-        cases [i + 5] [j + 14] ['c'] = color
-        cases [i + 5] [j + 20] ['s'] = life_status
-        cases [i + 5] [j + 20] ['c'] = color
-        cases [i + 5] [j + 22] ['s'] = life_status
-        cases [i + 5] [j + 22] ['c'] = color
+        cases [i + 3] [j + 5] ['s'] = life_status
+        cases [i + 3] [j + 5] ['c'] = color
+        cases [i + 6] [j + 5] ['s'] = life_status
+        cases [i + 6] [j + 5] ['c'] = color
+        cases [i + 9] [j + 5] ['s'] = life_status
+        cases [i + 9] [j + 5] ['c'] = color
+        cases [i + 11] [j + 5] ['s'] = life_status
+        cases [i + 11] [j + 5] ['c'] = color
+        cases [i + 12] [j + 5] ['s'] = life_status
+        cases [i + 12] [j + 5] ['c'] = color
+        cases [i + 14] [j + 5] ['s'] = life_status
+        cases [i + 14] [j + 5] ['c'] = color
+        cases [i + 20] [j + 5] ['s'] = life_status
+        cases [i + 20] [j + 5] ['c'] = color
+        cases [i + 22] [j + 5] ['s'] = life_status
+        cases [i + 22] [j + 5] ['c'] = color
 
-        cases [i + 6] [j + 4] ['s'] = life_status
-        cases [i + 6] [j + 4] ['c'] = color
-        cases [i + 6] [j + 7] ['s'] = life_status
-        cases [i + 6] [j + 7] ['c'] = color
-        cases [i + 6] [j + 10] ['s'] = life_status
-        cases [i + 6] [j + 10] ['c'] = color
-        cases [i + 6] [j + 13] ['s'] = life_status
-        cases [i + 6] [j + 13] ['c'] = color
-        cases [i + 6] [j + 15] ['s'] = life_status
-        cases [i + 6] [j + 15] ['c'] = color
-        cases [i + 6] [j + 16] ['s'] = life_status
-        cases [i + 6] [j + 16] ['c'] = color
-        cases [i + 6] [j + 20] ['s'] = life_status
-        cases [i + 6] [j + 20] ['c'] = color
-        cases [i + 6] [j + 22] ['s'] = life_status
-        cases [i + 6] [j + 22] ['c'] = color
+        cases [i + 4] [j + 6] ['s'] = life_status
+        cases [i + 4] [j + 6] ['c'] = color
+        cases [i + 7] [j + 6] ['s'] = life_status
+        cases [i + 7] [j + 6] ['c'] = color
+        cases [i + 10] [j + 6] ['s'] = life_status
+        cases [i + 10] [j + 6] ['c'] = color
+        cases [i + 13] [j + 6] ['s'] = life_status
+        cases [i + 13] [j + 6] ['c'] = color
+        cases [i + 15] [j + 6] ['s'] = life_status
+        cases [i + 15] [j + 6] ['c'] = color
+        cases [i + 16] [j + 6] ['s'] = life_status
+        cases [i + 16] [j + 6] ['c'] = color
+        cases [i + 20] [j + 6] ['s'] = life_status
+        cases [i + 20] [j + 6] ['c'] = color
+        cases [i + 22] [j + 6] ['s'] = life_status
+        cases [i + 22] [j + 6] ['c'] = color
 
-        cases [i + 7] [j + 5] ['s'] = life_status
-        cases [i + 7] [j + 5] ['c'] = color
-        cases [i + 7] [j + 8] ['s'] = life_status
-        cases [i + 7] [j + 8] ['c'] = color
-        cases [i + 7] [j + 11] ['s'] = life_status
-        cases [i + 7] [j + 11] ['c'] = color
-        cases [i + 7] [j + 14] ['s'] = life_status
-        cases [i + 7] [j + 14] ['c'] = color
-        cases [i + 7] [j + 16] ['s'] = life_status
-        cases [i + 7] [j + 16] ['c'] = color
-        cases [i + 7] [j + 19] ['s'] = life_status
-        cases [i + 7] [j + 19] ['c'] = color
-        cases [i + 7] [j + 22] ['s'] = life_status
-        cases [i + 7] [j + 22] ['c'] = color
+        cases [i + 5] [j + 7] ['s'] = life_status
+        cases [i + 5] [j + 7] ['c'] = color
+        cases [i + 8] [j + 7] ['s'] = life_status
+        cases [i + 8] [j + 7] ['c'] = color
+        cases [i + 11] [j + 7] ['s'] = life_status
+        cases [i + 11] [j + 7] ['c'] = color
+        cases [i + 14] [j + 7] ['s'] = life_status
+        cases [i + 14] [j + 7] ['c'] = color
+        cases [i + 16] [j + 7] ['s'] = life_status
+        cases [i + 16] [j + 7] ['c'] = color
+        cases [i + 19] [j + 7] ['s'] = life_status
+        cases [i + 19] [j + 7] ['c'] = color
+        cases [i + 22] [j + 7] ['s'] = life_status
+        cases [i + 22] [j + 7] ['c'] = color
 
-        cases [i + 8] [j + 6] ['s'] = life_status
-        cases [i + 8] [j + 6] ['c'] = color
-        cases [i + 8] [j + 9] ['s'] = life_status
-        cases [i + 8] [j + 9] ['c'] = color
-        cases [i + 8] [j + 12] ['s'] = life_status
-        cases [i + 8] [j + 12] ['c'] = color
-        cases [i + 8] [j + 13] ['s'] = life_status
-        cases [i + 8] [j + 13] ['c'] = color
-        cases [i + 8] [j + 16] ['s'] = life_status
-        cases [i + 8] [j + 16] ['c'] = color
-        cases [i + 8] [j + 18] ['s'] = life_status
-        cases [i + 8] [j + 18] ['c'] = color
-        cases [i + 8] [j + 20] ['s'] = life_status
-        cases [i + 8] [j + 20] ['c'] = color
-        cases [i + 8] [j + 21] ['s'] = life_status
-        cases [i + 8] [j + 21] ['c'] = color
+        cases [i + 6] [j + 8] ['s'] = life_status
+        cases [i + 6] [j + 8] ['c'] = color
+        cases [i + 9] [j + 8] ['s'] = life_status
+        cases [i + 9] [j + 8] ['c'] = color
+        cases [i + 12] [j + 8] ['s'] = life_status
+        cases [i + 12] [j + 8] ['c'] = color
+        cases [i + 13] [j + 8] ['s'] = life_status
+        cases [i + 13] [j + 8] ['c'] = color
+        cases [i + 16] [j + 8] ['s'] = life_status
+        cases [i + 16] [j + 8] ['c'] = color
+        cases [i + 18] [j + 8] ['s'] = life_status
+        cases [i + 18] [j + 8] ['c'] = color
+        cases [i + 20] [j + 8] ['s'] = life_status
+        cases [i + 20] [j + 8] ['c'] = color
+        cases [i + 21] [j + 8] ['s'] = life_status
+        cases [i + 21] [j + 8] ['c'] = color
 
-        cases [i + 9] [j + 7] ['s'] = life_status
-        cases [i + 9] [j + 7] ['c'] = color
-        cases [i + 9] [j + 10] ['s'] = life_status
-        cases [i + 9] [j + 10] ['c'] = color
-        cases [i + 9] [j + 13] ['s'] = life_status
-        cases [i + 9] [j + 13] ['c'] = color
-        cases [i + 9] [j + 16] ['s'] = life_status
-        cases [i + 9] [j + 16] ['c'] = color
-        cases [i + 9] [j + 17] ['s'] = life_status
-        cases [i + 9] [j + 17] ['c'] = color
-        cases [i + 9] [j + 18] ['s'] = life_status
-        cases [i + 9] [j + 18] ['c'] = color
-        cases [i + 9] [j + 19] ['s'] = life_status
-        cases [i + 9] [j + 19] ['c'] = color
-        cases [i + 9] [j + 21] ['s'] = life_status
-        cases [i + 9] [j + 21] ['c'] = color
+        cases [i + 7] [j + 9] ['s'] = life_status
+        cases [i + 7] [j + 9] ['c'] = color
+        cases [i + 10] [j + 9] ['s'] = life_status
+        cases [i + 10] [j + 9] ['c'] = color
+        cases [i + 13] [j + 9] ['s'] = life_status
+        cases [i + 13] [j + 9] ['c'] = color
+        cases [i + 16] [j + 9] ['s'] = life_status
+        cases [i + 16] [j + 9] ['c'] = color
+        cases [i + 17] [j + 9] ['s'] = life_status
+        cases [i + 17] [j + 9] ['c'] = color
+        cases [i + 18] [j + 9] ['s'] = life_status
+        cases [i + 18] [j + 9] ['c'] = color
+        cases [i + 19] [j + 9] ['s'] = life_status
+        cases [i + 19] [j + 9] ['c'] = color
+        cases [i + 21] [j + 9] ['s'] = life_status
+        cases [i + 21] [j + 9] ['c'] = color
 
-        cases [i + 10] [j + 8] ['s'] = life_status
-        cases [i + 10] [j + 8] ['c'] = color
-        cases [i + 10] [j + 11] ['s'] = life_status
-        cases [i + 10] [j + 11] ['c'] = color
-        cases [i + 10] [j + 13] ['s'] = life_status
-        cases [i + 10] [j + 13] ['c'] = color
-        cases [i + 10] [j + 21] ['s'] = life_status
-        cases [i + 10] [j + 21] ['c'] = color
-        cases [i + 10] [j + 22] ['s'] = life_status
-        cases [i + 10] [j + 22] ['c'] = color
+        cases [i + 8] [j + 10] ['s'] = life_status
+        cases [i + 8] [j + 10] ['c'] = color
+        cases [i + 11] [j + 10] ['s'] = life_status
+        cases [i + 11] [j + 10] ['c'] = color
+        cases [i + 13] [j + 10] ['s'] = life_status
+        cases [i + 13] [j + 10] ['c'] = color
+        cases [i + 21] [j + 10] ['s'] = life_status
+        cases [i + 21] [j + 10] ['c'] = color
+        cases [i + 22] [j + 10] ['s'] = life_status
+        cases [i + 22] [j + 10] ['c'] = color
 
-        cases [i + 11] [j + 9] ['s'] = life_status
-        cases [i + 11] [j + 9] ['c'] = color
-        cases [i + 11] [j + 12] ['s'] = life_status
-        cases [i + 11] [j + 12] ['c'] = color
-        cases [i + 11] [j + 14] ['s'] = life_status
-        cases [i + 11] [j + 14] ['c'] = color
-        cases [i + 11] [j + 20] ['s'] = life_status
-        cases [i + 11] [j + 20] ['c'] = color
-        cases [i + 11] [j + 23] ['s'] = life_status
-        cases [i + 11] [j + 23] ['c'] = color
+        cases [i + 9] [j + 11] ['s'] = life_status
+        cases [i + 9] [j + 11] ['c'] = color
+        cases [i + 12] [j + 11] ['s'] = life_status
+        cases [i + 12] [j + 11] ['c'] = color
+        cases [i + 14] [j + 11] ['s'] = life_status
+        cases [i + 14] [j + 11] ['c'] = color
+        cases [i + 20] [j + 11] ['s'] = life_status
+        cases [i + 20] [j + 11] ['c'] = color
+        cases [i + 23] [j + 11] ['s'] = life_status
+        cases [i + 23] [j + 11] ['c'] = color
 
-        cases [i + 12] [j + 10] ['s'] = life_status
-        cases [i + 12] [j + 10] ['c'] = color
-        cases [i + 12] [j + 13] ['s'] = life_status
-        cases [i + 12] [j + 13] ['c'] = color
-        cases [i + 12] [j + 15] ['s'] = life_status
-        cases [i + 12] [j + 15] ['c'] = color
-        cases [i + 12] [j + 16] ['s'] = life_status
-        cases [i + 12] [j + 16] ['c'] = color
-        cases [i + 12] [j + 20] ['s'] = life_status
-        cases [i + 12] [j + 20] ['c'] = color
-        cases [i + 12] [j + 24] ['s'] = life_status
-        cases [i + 12] [j + 24] ['c'] = color
-
-        cases [i + 13] [j + 11] ['s'] = life_status
-        cases [i + 13] [j + 11] ['c'] = color
+        cases [i + 10] [j + 12] ['s'] = life_status
+        cases [i + 10] [j + 12] ['c'] = color
         cases [i + 13] [j + 12] ['s'] = life_status
         cases [i + 13] [j + 12] ['c'] = color
+        cases [i + 15] [j + 12] ['s'] = life_status
+        cases [i + 15] [j + 12] ['c'] = color
+        cases [i + 16] [j + 12] ['s'] = life_status
+        cases [i + 16] [j + 12] ['c'] = color
+        cases [i + 20] [j + 12] ['s'] = life_status
+        cases [i + 20] [j + 12] ['c'] = color
+        cases [i + 24] [j + 12] ['s'] = life_status
+        cases [i + 24] [j + 12] ['c'] = color
+
+        cases [i + 11] [j + 13] ['s'] = life_status
+        cases [i + 11] [j + 13] ['c'] = color
+        cases [i + 12] [j + 13] ['s'] = life_status
+        cases [i + 12] [j + 13] ['c'] = color
         cases [i + 13] [j + 13] ['s'] = life_status
         cases [i + 13] [j + 13] ['c'] = color
-        cases [i + 13] [j + 14] ['s'] = life_status
-        cases [i + 13] [j + 14] ['c'] = color
-        cases [i + 13] [j + 15] ['s'] = life_status
-        cases [i + 13] [j + 15] ['c'] = color
-        cases [i + 13] [j + 17] ['s'] = life_status
-        cases [i + 13] [j + 17] ['c'] = color
-        cases [i + 13] [j + 18] ['s'] = life_status
-        cases [i + 13] [j + 18] ['c'] = color
-        cases [i + 13] [j + 19] ['s'] = life_status
-        cases [i + 13] [j + 19] ['c'] = color
-        cases [i + 13] [j + 25] ['s'] = life_status
-        cases [i + 13] [j + 25] ['c'] = color
-        cases [i + 13] [j + 26] ['s'] = life_status
-        cases [i + 13] [j + 26] ['c'] = color
-
-        cases [i + 14] [j + 12] ['s'] = life_status
-        cases [i + 14] [j + 12] ['c'] = color
-        cases [i + 14] [j + 14] ['s'] = life_status
-        cases [i + 14] [j + 14] ['c'] = color
-
+        cases [i + 14] [j + 13] ['s'] = life_status
+        cases [i + 14] [j + 13] ['c'] = color
         cases [i + 15] [j + 13] ['s'] = life_status
         cases [i + 15] [j + 13] ['c'] = color
+        cases [i + 17] [j + 13] ['s'] = life_status
+        cases [i + 17] [j + 13] ['c'] = color
+        cases [i + 18] [j + 13] ['s'] = life_status
+        cases [i + 18] [j + 13] ['c'] = color
+        cases [i + 19] [j + 13] ['s'] = life_status
+        cases [i + 19] [j + 13] ['c'] = color
+        cases [i + 25] [j + 13] ['s'] = life_status
+        cases [i + 25] [j + 13] ['c'] = color
+        cases [i + 26] [j + 13] ['s'] = life_status
+        cases [i + 26] [j + 13] ['c'] = color
 
+        cases [i + 12] [j + 14] ['s'] = life_status
+        cases [i + 12] [j + 14] ['c'] = color
+        cases [i + 14] [j + 14] ['s'] = life_status
+        cases [i + 14] [j + 14] ['c'] = color
+        cases [i + 20] [j + 14] ['s'] = life_status
+        cases [i + 20] [j + 14] ['c'] = color
+        cases [i + 27] [j + 14] ['s'] = life_status
+        cases [i + 27] [j + 14] ['c'] = color
 
+        cases [i + 13] [j + 15] ['s'] = life_status
+        cases [i + 13] [j + 15] ['c'] = color
+        cases [i + 21] [j + 15] ['s'] = life_status
+        cases [i + 21] [j + 15] ['c'] = color
+        cases [i + 28] [j + 15] ['s'] = life_status
+        cases [i + 28] [j + 15] ['c'] = color
+        cases [i + 29] [j + 15] ['s'] = life_status
+        cases [i + 29] [j + 15] ['c'] = color
+
+        cases [i + 22] [j + 16] ['s'] = life_status
+        cases [i + 22] [j + 16] ['c'] = color
+        cases [i + 30] [j + 16] ['s'] = life_status
+        cases [i + 30] [j + 16] ['c'] = color
+
+        cases [i + 23] [j + 17] ['s'] = life_status
+        cases [i + 23] [j + 17] ['c'] = color
+        cases [i + 31] [j + 17] ['s'] = life_status
+        cases [i + 31] [j + 17] ['c'] = color
 
     except:
         pass
@@ -788,22 +806,22 @@ def apply_game_of_life_rules (grid):
 def apply_rules (grid, compteur):
     print(compteur)
     if compteur == 0:
-        print ("COMPTEUR % 5  is  0")
-        next_grid = make_conway(grid,'black')
+        next_grid = make_cible(grid,'black')
     elif compteur == 1:
-        next_grid = make_cible(grid,0,13,'red')
+        next_grid = make_cible_title(grid,0,13,'red')
+    elif compteur == 3 :
+        next_grid = make_gun(grid, 65, 68, 'black')
     elif compteur == 57:
         next_grid = clean_grid(grid,67,75,0,70)
     elif compteur == 58:
         next_grid = make_viseur(grid,0,10,'red')
     elif compteur == 10:
-        next_grid = make_glisseur(grid,5 ,-5 ,'red')
-    elif compteur == 75:
-        next_grid= make_conway(grid,'black')
-    elif compteur > 76:
+        next_grid = make_glisseur(grid,4 ,-20 ,'red')
+    elif compteur == 80:
+        next_grid= make_cible(grid,'black')
+    elif compteur > 80:
         next_grid = apply_game_of_life_rules_original (grid)
     else:
-        print ("COMPTEUR % 5 is NOT 0")
         time.sleep (0.2)
         next_grid = apply_game_of_life_rules(grid)
     return next_grid
