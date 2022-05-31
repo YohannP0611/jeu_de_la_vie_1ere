@@ -62,7 +62,7 @@ for i in range (17, 42, 24) :
 ```
 *Les différents bug possible*
 * faire apparaitre une fenetre trop grande(taille changeable dans data), on vous conseille pour notre projet la taille préexistante(100*100)
-* on n
+
 
 
 
