@@ -809,17 +809,17 @@ def apply_rules (grid, compteur):
         next_grid = make_cible(grid,'black')
     elif compteur == 1:
         next_grid = make_cible_title(grid,0,13,'red')
-    elif compteur == 3 :
-        next_grid = make_gun(grid, 65, 68, 'black')
     elif compteur == 57:
-        next_grid = clean_grid(grid,67,75,0,70)
+        next_grid = clean_grid(grid,67,75,0,60)
     elif compteur == 58:
         next_grid = make_viseur(grid,0,10,'red')
-    elif compteur == 10:
+    elif compteur == 65 :
+        next_grid = make_gun(grid, 65, 68, 'black')
+    elif compteur == 70:
         next_grid = make_glisseur(grid,4 ,-20 ,'red')
-    elif compteur == 80:
+    elif compteur == 130:
         next_grid= make_cible(grid,'black')
-    elif compteur > 80:
+    elif compteur > 130:
         next_grid = apply_game_of_life_rules_original (grid)
     else:
         time.sleep (0.2)
